@@ -5,13 +5,13 @@
 
   <p>Pick one owner for the pet:</p>
   <% @owners.each do |owner|%>
-  <input type="radio" name="owner_id" value="<%= owner.id %>"><%= owner.name%></input>
+  <input type="radio" name="pet[owner_id]" value="<%= owner.id %>"><%= owner.name%></input>
   <br>
   <% end %>
 
 
   <p>Or create a owner for it:</p>
-  <input type="text" name="owner_name">
+  <input type="text" name="owner[name]" id="owner_name">
   <br>
 
 
