@@ -2,11 +2,11 @@
 
 <form action="/pets/<%= @pet.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <label>Pet Name: <input type="text" name="pet[name]" id="pet_name"></label><br>
+  <label>Pet Name: <input type="text" name="pet[name]" id="pet_name"><%= @pet.name %></label><br>
 
   <p>Pick one owner for the pet:</p>
   <% @owners.each do |owner|%>
-  <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>"><%= owner.name%></input>
+  <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>" checked><%= owner.name%></input>
   <br>
   <% end %>
 
