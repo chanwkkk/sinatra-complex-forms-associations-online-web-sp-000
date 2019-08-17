@@ -30,4 +30,4 @@ class PetsController < ApplicationController
 
     redirect to "pets/#{@pet.id}"
   end
-#end
+end
