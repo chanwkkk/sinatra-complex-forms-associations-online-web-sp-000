@@ -42,7 +42,6 @@ class PetsController < ApplicationController
     if !params[:owner][:name].empty?
       o=Owner.create(params[:owner])
       @pet.owner=o
-
     end
       @pet.save
 
