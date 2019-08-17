@@ -41,9 +41,10 @@ class PetsController < ApplicationController
 
     if !!params[:owner][:name]
       o=Owner.create(params[:owner])
-      @pet.owner.id=o.id
+      @pet.owner=o
     end
 
+    @pet.save
     redirect to "pets/#{@pet.id}"
   end
 end
